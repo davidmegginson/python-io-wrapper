@@ -8,7 +8,7 @@ if sys.version_info < (3,):
 
 setup(
     name='python-io-wrapper',
-    version='0.1',
+    version='0.2',
     description='IO wrapper to add missing methods from io.BaseIO',
     author='David Megginson',
     author_email='contact@megginson.io',

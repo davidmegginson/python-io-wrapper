@@ -1,6 +1,6 @@
 """Raw binary IO wrapper.
 
-Implement any missing methods from \L{io.RawIOBase} for a file-like object.
+Implement any missing methods from io.RawIOBase for a file-like object.
 
 @author: David Megginson
 @organization: UNOCHA
@@ -11,7 +11,7 @@ import io
 
 class RawIOWrapper(io.RawIOBase):
     """Wrapper for a raw (binary) IO object.
-    Implements all expected methods from \L{io.RawIOBase}.
+    Implements all expected methods from io.RawIOBase
     Calls to the wrapped stream when possible.
     """
 
@@ -58,7 +58,7 @@ class RawIOWrapper(io.RawIOBase):
     def readable(self):
         try:
             return self.stream.readable()
-        except AttributeError:
+        except:
             return True # assume readable
 
     def readline(self, limit=None):
