@@ -1,0 +1,4 @@
+include CHANGELOG
+include README.md
+include UNLICENSE.md
+include setup.py
