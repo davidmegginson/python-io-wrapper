@@ -15,5 +15,6 @@ from io_wrapper import RawIOWrapper
 new_stream = RawIOWrapper(my_file_like_object)
 ```
 
+## License
 
-
+This package is in the Public Domain. See UNLICENSE.md for details.

@@ -20,7 +20,11 @@ build-venv: $(VENV)
 
 # (re)build the virtual environment if it's missing, or whenever setup.py changes
 $(VENV): setup.py
-	rm -rf venv && virtualenv venv && . $(VENV) && python setup.py develop
+	rm -rf venv && python3 -m venv venv && . $(VENV) && python setup.py develop
+
+# publish a new release on PyPi
+publish-pypi: $(VENV)
+	. $(VENV) && pip install twine && rm -rf dist/* && python setup.py sdist && twine upload dist/*
 
 # end
 
